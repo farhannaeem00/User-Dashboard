@@ -2,28 +2,21 @@
 
 namespace App\Providers;
 
-use App\Models\Project;
-use App\Models\Task;
-use App\Models\Note;
-use App\Models\Payment;
-use App\Models\File;
-use App\Policies\ProjectPolicy;
-use App\Policies\TaskPolicy;
-use App\Policies\NotePolicy;
-use App\Policies\PaymentPolicy;
-use App\Policies\FilePolicy;
-use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
+class AppServiceProvider extends ServiceProvider
 {
-    protected $policies = [
-        Project::class => ProjectPolicy::class,
-        Task::class => TaskPolicy::class,
-        Note::class => NotePolicy::class,
-        Payment::class => PaymentPolicy::class,
-        File::class => FilePolicy::class,
-    ];
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
 
+    /**
+     * Bootstrap any application services.
+     */
     public function boot(): void
     {
         //
